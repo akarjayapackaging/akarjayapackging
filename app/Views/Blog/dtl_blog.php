@@ -50,39 +50,28 @@
                             <?= csrf_field(); ?>
                             <input type="hidden" name="slug" class="form-control" value="<?= $blog['slug_blog_ajp']; ?>">
                             <div class="be-comment">
-                                <div class="be-img-comment">
-                                    <a href="blog-detail-2.html">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
-                                    </a>
-                                </div>
-                                <div class="be-comment-content">
-                                    <p class="be-comment-text">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <input type="text" name="name" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" placeholder="Name" value="<?= old('name'); ?>">
-                                                <div class="invalid-feedback">
-                                                    <?= $validation->getError('name'); ?>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 mb-3">
-                                                <input type="email" name="email" class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" placeholder="email" value="<?= old('email'); ?>">
-                                                <div class="invalid-feedback">
-                                                    <?= $validation->getError('email'); ?>
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <textarea name="comment" class="form-control <?= ($validation->hasError('comment')) ? 'is-invalid' : ''; ?>" rows="3"><?= old('comment'); ?></textarea>
-                                                <div class="invalid-feedback">
-                                                    <?= $validation->getError('comment'); ?>
-                                                </div>
-                                            </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" name="name" class="form-control <?= ($validation->hasError('name')) ? 'is-invalid' : ''; ?>" placeholder="Name" value="<?= old('name'); ?>">
+                                        <div class="invalid-feedback">
+                                            <?= $validation->getError('name'); ?>
                                         </div>
-                                    </form>
-                                    </p>
-                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                        <button class="btn btn-primary" type="submit">Comment</button>
                                     </div>
+                                    <div class="col-6 mb-3">
+                                        <input type="email" name="email" class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" placeholder="email" value="<?= old('email'); ?>">
+                                        <div class="invalid-feedback">
+                                            <?= $validation->getError('email'); ?>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="comment" class="form-control <?= ($validation->hasError('comment')) ? 'is-invalid' : ''; ?>" rows="3"><?= old('comment'); ?></textarea>
+                                        <div class="invalid-feedback">
+                                            <?= $validation->getError('comment'); ?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2 mt-3 d-md-flex justify-content-md-end">
+                                    <button class="btn btn-primary" type="submit">Comment</button>
                                 </div>
                             </div>
                         </form>
@@ -98,20 +87,13 @@
                             $form_reply_balasan = 1;
                             foreach ($blog_comment as $bc) : ?>
                                 <div class="be-comment mb-4">
-                                    <div class="be-img-comment">
-                                        <a href="blog-detail-2.html">
-                                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="be-ava-comment">
-                                        </a>
-                                    </div>
-                                    <div class="be-comment-content">
 
-                                        <span class="be-comment-name">
-                                            <a href="blog-detail-2.html"><?= $bc['name_user_blog_comment_ajp']; ?> <?= $bc['created_at']; ?></a>
-                                        </span>
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <?= $bc['blog_comment_ajp']; ?>
-                                            </div>
+                                    <span class="be-comment-name">
+                                        <a href="blog-detail-2.html"><?= $bc['name_user_blog_comment_ajp']; ?> <?= $bc['created_at']; ?></a>
+                                    </span>
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <?= $bc['blog_comment_ajp']; ?>
                                         </div>
                                     </div>
                                 </div>

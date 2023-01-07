@@ -9,7 +9,7 @@ class Home extends BaseController
     public function __construct()
     {
         // Instagram
-        $accessToken = 'IGQVJWeGpTNWFQNWUzakwtVTc1RkFNRDdzbzhxQWYyVVdzSmV2VW9KU1hqZAkxWTF9TMFkwM0hEc0VDVEdYNzFqNERUREN4ZA1JIdTM5V1ZAqS0FMZADVheXZAxeXU2YTVIZAHJ2LTNaQXVJNkREQUZAlVjZALRQZDZD';
+        $accessToken = 'IGQVJYQmxmNVBvU3VhNEp4Vm5ia0g2YW5IVFdwdHNBR21mY25aRnczQ043bXFMNUVXR0ZAkR1A3WkVZAcFdUUkxSbVFON05hbS1zWFVoWHhPTkhKbjJFdDJyODMxY2huNHRBcTRfeDZA4aFVyUkxwZAGtuZAQZDZD';
         $params = array(
             'get_code' => isset($_GET['code']) ? $_GET['code'] : '',
             'access_token' => $accessToken,
