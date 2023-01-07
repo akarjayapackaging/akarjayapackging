@@ -75,7 +75,7 @@
             </div>
 
             <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-                <img src="<?= base_url('assets/img/about.jpg') ?>" class="img-fluid" alt="">
+                <img src="<?= base_url('assets/img/about.webp') ?>" class="img-fluid" alt="">
             </div>
 
         </div>
